@@ -7,7 +7,7 @@
 //end-here
 //});
 
-+ : parseInt
+//+ : parseInt
 
 with for loop
 //start here
