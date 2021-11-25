@@ -9,7 +9,15 @@
 
 //+ : parseInt
 
-with for loop
+//with for loop
+const readline= require("readline");
+const inp = readline.createInterface({
+    input: process.stdin});
+    const userInput = [];
+    inp.on("line",(data) => {
+        userInput.push(data);
+    });
+inp.on("close",() => {
 //start here
 for(let i=0; i<3; i=i+1)
 {
