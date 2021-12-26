@@ -38,6 +38,3 @@ So it's properties would be car.brand="BMW"
                             car.model="Q7"
                             car.color="Black"
                             car.price="30000USD"
-so we can define this object in javascript as follows:
-const car={brand="BMW", model="Q7", color="Black", price="30000USD"}
-We used const here but let or var can also be used. 
