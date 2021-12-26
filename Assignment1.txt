@@ -1,0 +1,43 @@
+Question -
+Write a blog on Difference between HTTP1.1 vs HTTP2.
+
+Answer -
+HTTP1.1:
+HTTP/1.1 has served the Web well for more than fifteen years, but its age is starting to show.
+Loading a Web page is more resource intensive than ever, and loading all of those assets efficiently is difficult, 
+because HTTP practically only allows one outstanding request per TCP connection.
+Previously, browsers have used multiple TCP connections to issue parallel requests. However, there are limits to this. 
+If too many connections are used, it’s both counter-productive as TCP congestion control is effectively negated, leading to congestion events that hurt performance and the network, and it’s fundamentally unfair because browsers are taking more than their share of network resources. 
+At the same time, the large number of requests means a lot of duplicated data “on the wire”.
+Both of these factors means that HTTP/1.1 requests have a lot of overhead associated with them. If too many requests are made, it hurts performance.
+This has led the industry to a place where it’s considered Best Practice to do things like spriting, data: inlining, domain sharding and concatenation. 
+These hacks are indications of underlying problems in the protocol itself, and cause a number of problems on their own when used.
+HTTP/2:
+HTTP/2 was developed by the IETF’s HTTP Working Group, which maintains the HTTP protocol. 
+It’s made up of a number of HTTP implementers, users, network operators and HTTP experts. 
+Tim Berners-Lee and the W3C TAG are kept up-to-date with the WG’s progress, however.
+HTTP/2 supports queries multiplexing, headers compression, priority and more intelligent packet streaming management. 
+This results in reduced latency and accelerates content download on modern web pages.
+Key differences to HTTP/1.X -
+
+At a high level, HTTP/2:
+
+is binary, instead of textual
+is fully multiplexed, instead of ordered and blocking
+can therefore use one connection for parallelism
+uses header compression to reduce overhead
+allows servers to “push” responses proactively into client caches
+
+Question -
+Write a blog about object and its internal representation in Javascript.
+
+Answer-
+Every object has its own unique properties. To define an object in javascript all you need to do is to define the object with its properties and each property seperated by a comma(,) enclosed within curly brackets.
+Eg: lets consider car as the object here
+So it's properties would be car.brand="BMW"
+                            car.model="Q7"
+                            car.color="Black"
+                            car.price="30000USD"
+so we can define this object in javascript as follows:
+const car={brand="BMW", model="Q7", color="Black", price="30000USD"}
+We used const here but let or var can also be used. 
